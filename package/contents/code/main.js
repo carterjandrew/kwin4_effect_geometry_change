@@ -114,7 +114,7 @@ class GeometryChangeEffect {
         animate({
             window: window,
             duration: this.duration,
-            curve: QEasingCurve.OutExpo,
+            curve: QEasingCurve.InOutExpo,
             animations: animations,
         });
     }
