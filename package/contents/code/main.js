@@ -16,6 +16,7 @@ class GeometryChangeEffect {
         const duration = effect.readConfig("Duration", 250);
         this.duration = animationTime(duration);
         this.excludedWindowClasses = effect.readConfig("ExcludedWindowClasses", "krunner,yakuake").split(",");
+        this.crossFade = effect.readConfig("CrossFade", false);
     }
 
     manage(window) {
@@ -66,6 +67,11 @@ class GeometryChangeEffect {
             return;
         }
 
+        if (maximizationChange && effects.activeEffects.includes("maximize")) {
+            // Maximize effect is animating. Don't animate over it.
+            return;
+        }
+
         const windowAgeMs = Date.now() - window.geometryChangeData.createdTime;
         if (windowAgeMs < 0) {
             // May happen after time zone change. Let's fix the created time, so it's not in the future.
@@ -107,6 +113,14 @@ class GeometryChangeEffect {
                 },
             },
         ];
+
+        if (this.crossFade) {
+            animations.push({
+                type: Effect.CrossFadePrevious,
+                from: 0,
+                to: 1,
+            });
+        }
 
         window.geometryChangeData.animationInstances += animations.length;
         window.setData(Effect.WindowForceBlurRole, true);
