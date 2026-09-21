@@ -3,6 +3,68 @@
  <class>GeometryChangeEffectConfig</class>
  <widget class="QWidget" name="GeometryChangeEffectConfig">
   <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_EasingCurve">
+     <property name="text">
+      <string>Easing curve:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="kcfg_EasingCurve">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <item><property name="text"><string>Linear</string></property></item>
+     <item><property name="text"><string>In Quad</string></property></item>
+     <item><property name="text"><string>Out Quad</string></property></item>
+     <item><property name="text"><string>In-Out Quad</string></property></item>
+     <item><property name="text"><string>Out-In Quad</string></property></item>
+     <item><property name="text"><string>In Cubic</string></property></item>
+     <item><property name="text"><string>Out Cubic</string></property></item>
+     <item><property name="text"><string>In-Out Cubic</string></property></item>
+     <item><property name="text"><string>Out-In Cubic</string></property></item>
+     <item><property name="text"><string>In Quart</string></property></item>
+     <item><property name="text"><string>Out Quart</string></property></item>
+     <item><property name="text"><string>In-Out Quart</string></property></item>
+     <item><property name="text"><string>Out-In Quart</string></property></item>
+     <item><property name="text"><string>In Quint</string></property></item>
+     <item><property name="text"><string>Out Quint</string></property></item>
+     <item><property name="text"><string>In-Out Quint</string></property></item>
+     <item><property name="text"><string>Out-In Quint</string></property></item>
+     <item><property name="text"><string>In Sine</string></property></item>
+     <item><property name="text"><string>Out Sine</string></property></item>
+     <item><property name="text"><string>In-Out Sine</string></property></item>
+     <item><property name="text"><string>Out-In Sine</string></property></item>
+     <item><property name="text"><string>In Expo</string></property></item>
+     <item><property name="text"><string>Out Expo</string></property></item>
+     <item><property name="text"><string>In-Out Expo</string></property></item>
+     <item><property name="text"><string>Out-In Expo</string></property></item>
+     <item><property name="text"><string>In Circ</string></property></item>
+     <item><property name="text"><string>Out Circ</string></property></item>
+     <item><property name="text"><string>In-Out Circ</string></property></item>
+     <item><property name="text"><string>Out-In Circ</string></property></item>
+     <item><property name="text"><string>In Elastic</string></property></item>
+     <item><property name="text"><string>Out Elastic</string></property></item>
+     <item><property name="text"><string>In-Out Elastic</string></property></item>
+     <item><property name="text"><string>Out-In Elastic</string></property></item>
+     <item><property name="text"><string>In Back</string></property></item>
+     <item><property name="text"><string>Out Back</string></property></item>
+     <item><property name="text"><string>In-Out Back</string></property></item>
+     <item><property name="text"><string>Out-In Back</string></property></item>
+     <item><property name="text"><string>In Bounce</string></property></item>
+     <item><property name="text"><string>Out Bounce</string></property></item>
+     <item><property name="text"><string>In-Out Bounce</string></property></item>
+     <item><property name="text"><string>Out-In Bounce</string></property></item>
+     <item><property name="text"><string>In Curve</string></property></item>
+     <item><property name="text"><string>Out Curve</string></property></item>
+     <item><property name="text"><string>Sine Curve</string></property></item>
+     <item><property name="text"><string>Cosine Curve</string></property></item>
+    </widget>
+   </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label_Duration">
      <property name="text">

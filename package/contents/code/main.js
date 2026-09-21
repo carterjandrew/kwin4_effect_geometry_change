@@ -13,6 +13,12 @@ class GeometryChangeEffect {
     }
 
     loadConfig() {
+        const easingCurve = Number(effect.readConfig("EasingCurve", QEasingCurve.InOutExpo));
+        this.easingCurve = Number.isInteger(easingCurve) &&
+            easingCurve >= QEasingCurve.Linear &&
+            easingCurve <= QEasingCurve.CosineCurve
+            ? easingCurve
+            : QEasingCurve.InOutExpo;
         const duration = effect.readConfig("Duration", 250);
         this.duration = animationTime(duration);
         this.excludedWindowClasses = effect.readConfig("ExcludedWindowClasses", "krunner,yakuake").split(",");
@@ -128,7 +134,7 @@ class GeometryChangeEffect {
         animate({
             window: window,
             duration: this.duration,
-            curve: QEasingCurve.InOutExpo,
+            curve: this.easingCurve,
             animations: animations,
         });
     }

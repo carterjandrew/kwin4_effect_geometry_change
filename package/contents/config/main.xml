@@ -5,6 +5,9 @@
                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
     <kcfgfile name=""/>
     <group name="">
+        <entry name="EasingCurve" type="Int">
+            <default>23</default>
+        </entry>
         <entry name="Duration" type="UInt">
             <default>250</default>
         </entry>
